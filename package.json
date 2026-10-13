@@ -1,0 +1,9 @@
+{
+  "name": "shreya-bawankar-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Beginner-friendly JavaScript Lab CA3 portfolio website",
+  "scripts": {
+    "start": "node server.js"
+  }
+}
