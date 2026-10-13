@@ -25,4 +25,9 @@
 <section class="privacy"><div class="wrap privacy-inner"><div><p class="eyebrow">SITE INFORMATION</p><h2>Visitor privacy</h2><p>When this portfolio is served by its Node server, it records the IP address the server receives, visit time, page path, and browser details to help Shreya understand portfolio traffic. A proxy or hosting provider may change the IP address the server sees. These details do not reliably reveal a visitor’s identity. No third-party analytics service is used. Contact Shreya directly if you would like to introduce yourself or ask about the portfolio.</p></div><div class="analytics-card"><div class="analytics-title"><span class="live-dot"></span> VISIT LOGGING</div><p>When enabled, basic visit details are stored on the server and are visible only on the password-protected owner dashboard. Visitors are not identified by name unless they choose to provide it.</p><p class="analytics-note"><a href="/owner">Owner dashboard ↗</a> · Use only over HTTPS when deployed publicly. Logs should be kept private and deleted when no longer needed.</p></div></div></section>
 </main><footer><div class="wrap footer"><a class="wordmark" href="#home">SB<span>.</span></a><span>Designed with curiosity · <span id="year"></span></span><a href="#home">Back to top ↑</a></div></footer>
 <script src="script.js"></script>
+<script>
+fetch("/api/visit?page=" + encodeURIComponent(window.location.pathname), {
+  cache: "no-store"
+}).catch(() => {});
+</script>
 </body></html>
